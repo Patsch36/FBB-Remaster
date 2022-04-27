@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+    --body-color: #000000;
+    --dark-color: #333333;
+    --dark-color-lighter: #555555;
+    --light-color: #8C8C8C;
+    --light-color-lighter: #9E9E9E;
+    --accent-color: #c6a966;
+    --text-color: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', 'sans-serif';
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--body-color);
+}
+
+body.dark-theme{
+    --body-color: rgb(233, 233, 233);
+    --dark-color: #9E9E9E;
+    --dark-color-lighter: #8C8C8C;
+    --light-color: #555555;
+    --light-color-lighter: #333333;
+    --accent-color: #c6a966;
+    --text-color: #000000;
+}
+
+#app{
+    height: 100vh;
+}
+
+.body{
+    height: 50%;
+    background-color: var(--body-color);
+}
+
+.main-container {
+    background-color: var(--body-color);
+}
+
+#header{
+    background-color: var(--body-color);
+    color: var(--light-color);
+    box-shadow: none;
+}
+
+#header > div{
+    color: var(--text-color);
+}
