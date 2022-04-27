@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "travis": "^0.1.1",
     "vue": "^2.6.11",
     "vue-material-design-icons": "^5.0.0",
     "vuetify": "^2.4.0"
