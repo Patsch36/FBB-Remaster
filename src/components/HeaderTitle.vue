@@ -1,27 +1,29 @@
 <template>
-  <header id="header">
+  <header id="header" class="bg-background">
     <div class="header-training">
-      <transition name="leftHeader" appear>
-        <span class="header-text header-text-left"
-          >TR</span>
+      <transition name="leftHeader" :key="animationTrigger" appear>
+        <span class="header-text header-text-left">TR</span>
       </transition>
       <transition name="imageHeader" appear>
-      <img
-        src="../assets/images/index/bki9701.png"
-        alt=""
-        class="header-img"
-      />
+        <img :src="img_src" alt="" class="header-img" />
       </transition>
       <transition name="rightHeader" appear>
-      <span class="header-text header-text-right"
-        >NG</span
-      >
+        <span class="header-text header-text-right">NG</span>
       </transition>
     </div>
   </header>
 </template>
 
 <script>
+export default {
+  computed: {
+    img_src: () => {
+      return process.env.NODE_ENV === "production"
+        ? "./assets/images/index/bki9701.png"
+        : "../assets/images/index/bki9701.png";
+    },
+  },
+};
 </script>
 
 <style>
@@ -40,7 +42,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 2rem;
-  transform: translateY(-5%);
+  /* transform: translateY(-5%); */
 }
 
 .header-text {
@@ -68,32 +70,49 @@
   z-index: 8;
 }
 
-
-.leftHeader-enter-active{
+.leftHeader-enter-active {
   animation: header-left-keyframe 1s ease-out;
 }
 
-.rightHeader-enter-active{
+.rightHeader-enter-active {
   animation: header-right-keyframe 1s ease-out;
 }
 
-.imageHeader-enter-active{
+.imageHeader-enter-active {
   animation: header-image-keyframe 1s ease-out;
 }
 
 @keyframes header-left-keyframe {
-  0%{opacity: 0; transform: translate(-400px, 2.5%);}
-  100%{opacity: 1; transform: translate(0px, 2.5%);}
+  0% {
+    opacity: 0;
+    transform: translate(-400px, 2.5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 2.5%);
+  }
 }
 
 @keyframes header-right-keyframe {
-  0%{opacity: 0; transform: translate(400px, 3%);}
-  100%{opacity: 1; transform: translate(-15%, 3%);}
+  0% {
+    opacity: 0;
+    transform: translate(400px, 3%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-15%, 3%);
+  }
 }
 
 @keyframes header-image-keyframe {
-  0%{opacity: 0; transform: translateY(400px);}
-  100%{opacity: 1; transform: translateY(0);}
+  0% {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Nesthub and Tablets */
@@ -102,18 +121,18 @@
     font-size: 173.1px; /* 1.733 is Proportionality factor of header to image*/
     transform: translateY(2.5%);
     overflow: visible;
-  width: auto;
+    width: auto;
   }
 
   .header-text-right {
     transform: translate(-10%, 3%);
     overflow: visible;
-  width: auto;
+    width: auto;
   }
 
   .header-img {
     height: 300px;
-  width: auto;
+    width: auto;
   }
 }
 
@@ -123,13 +142,13 @@
     font-size: 115.4px; /* 1.733 is Proportionality factor of header to image*/
     transform: translateY(2.5%);
     overflow: visible;
-  width: auto;
+    width: auto;
   }
 
   .header-text-right {
     transform: translate(-10%, 3%);
     overflow: visible;
-  width: auto;
+    width: auto;
   }
 
   .header-img {
@@ -142,12 +161,12 @@
   .header-text {
     font-size: 57.7px; /* 1.733 is Proportionality factor of header to image*/
     transform: translateY(2.5%);
-  width: auto;
+    width: auto;
   }
 
   .header-text-right {
     transform: translate(-12%, 3%);
-  width: auto;
+    width: auto;
   }
 
   .header-img {
@@ -160,12 +179,12 @@
   .header-text {
     font-size: 40px; /* 1.733 is Proportionality factor of header to image*/
     transform: translateY(2.5%);
-  width: auto;
+    width: auto;
   }
 
   .header-img {
     height: 75px;
-  width: auto;
+    width: auto;
   }
 }
 </style>

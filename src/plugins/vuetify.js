@@ -27,7 +27,12 @@ const DarkTheme = {
   colors: {
     background: '#000000',
     surface: '#000000',
-    primary: '#c6a966'
+    primary: '#c6a966',
+    textcolor: '#ffffff',
+    darkgrey: '#222222',
+    darkgreylighter: '#333333',
+    grey: '#555555',
+    greylighter: '#8C8C8C',
   }
 }
 
@@ -41,9 +46,12 @@ export default createVuetify({
   },
   theme: {
     defaultTheme: 'DarkTheme',
+    options: {
+      customProperties: true
+  },  
     themes: {
       LightTheme,
       DarkTheme,
     }
-  }
+  },
 })
