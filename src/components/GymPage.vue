@@ -1,8 +1,8 @@
 <template>
   <section
     id="overview"
-    class="bg-background"
-    style="height: 100%; width: 100vw"
+    class="bg-background mb-16 mb-md-12"
+    style="height: auto; min-height: 90vh; width: 100vw"
   >
     <v-container>
       <v-row justify="center" no-gutters>
@@ -63,12 +63,14 @@
           :key="card.title"
           :data-index="index"
         >
-          <div class="card scroll-reveal-left pa-12">
+          <div class="card scroll-reveal-left pa-6 pa-md-12">
             <div class="card-image">
               <img :src="card.image_url" alt="" class="overview-card" />
             </div>
-            <h1>{{ card.title }}</h1>
-            <p>{{ card.description }}</p>
+            <div>
+              <h1>{{ card.title }}</h1>
+              <p>{{ card.description }}</p>
+            </div>
           </div>
         </v-col>
       </v-row>
@@ -80,10 +82,12 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
+gsap.core.globals("ScrollTrigger", ScrollTrigger);
 
 export default {
   mounted: function () {
     this.scrollAnimation();
+
   },
   methods: {
     scrollAnimation() {
@@ -91,22 +95,33 @@ export default {
         scrollTrigger: {
           trigger: ".card",
           start: "-50% bottom",
-          toggleActions: "restart none reset none",
+          toggleActions: "restart none restart none",
         },
       });
-      gs.from(".card", {
-        y: innerWidth * 0.2,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.2,
-      });
+      gs.fromTo(
+        ".card",
+        {
+          y: innerWidth * 0.3,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.2,
+        },
+        {
+          y: innerWidth * -0.001,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.2,
+        }
+      );
+
+      return () => {
+        gs.scrollTrigger.kill();
+      };
     },
 
     get_right_path: (path) => {
-      return process.env.NODE_ENV === "production"
-        ? "./" + path
-        : "../" + path;
-    }
+      return process.env.NODE_ENV === "production" ? "./" + path : "../" + path;
+    },
   },
   data() {
     return {
@@ -189,6 +204,7 @@ export default {
 #header {
   font-size: 50px;
   z-index: 1;
+  text-transform: uppercase;
   transform: translateY(35%);
 }
 
@@ -200,10 +216,19 @@ export default {
 
 .card {
   border: 3px solid rgb(var(--v-theme-textcolor)) !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .overview-card {
-  max-width: 35vw;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.card p {
+  height: 50px;
 }
 
 @media screen and (max-width: 1280px) {

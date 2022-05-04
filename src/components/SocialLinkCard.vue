@@ -57,6 +57,7 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
 .footer-card-cta {
   width: 15%;
   height: auto;
@@ -76,7 +77,8 @@ export default {
 }
 
 .footer-card-title-large {
-  font-family: fantasy;
+  /* font-family: fantasy; */ /* Font family looks in the content much nicer, but poorly, it's not supported on IOS/ IpPadOS*/
+  font-family: 'Teko', sans-serif;
   font-size: 5rem;
   letter-spacing: 0.5rem;
   transform: translateX(55%);
