@@ -7,12 +7,12 @@
     <v-container>
       <v-row>
         <v-col cols="6" class="counter-wrapper">
-          <h3 class="text-h4 font-weight-bold number-counter" id="memCounter">1682</h3>
-          <span class="text-h5 counter-explanation" style="opacity: .8;">Mitglieder</span>
+          <h3 class="text-h6 text-md-h4 font-weight-bold number-counter" id="memCounter">1682</h3>
+          <span class="text-caption text-md-h5 counter-explanation" style="opacity: .8;">Mitglieder</span>
         </v-col>
         <v-col cols="6" class="counter-wrapper">
-          <h3 class="text-h4 font-weight-bold number-counter" id="goalCounter">1228</h3>
-          <span class="text-h5 counter-explanation" style="opacity: .8;"
+          <h3 class="text-h6 text-md-h4 font-weight-bold number-counter" id="goalCounter">1228</h3>
+          <span class="text-caption text-md-h5 counter-explanation" style="opacity: .8;"
             >Körperliches Ziel erreicht</span
           >
         </v-col>
@@ -170,6 +170,7 @@ export default {
 <style scoped>
 .counter-wrapper{
   text-align: center;
+  padding: none;
 }
 
 

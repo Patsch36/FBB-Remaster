@@ -1,6 +1,6 @@
 <template>
   <section
-    id="overview"
+    id="training"
     class="bg-background mb-16 mb-md-12"
     style="height: auto; min-height: 90vh; width: 100vw"
   >

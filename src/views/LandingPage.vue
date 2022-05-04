@@ -5,7 +5,7 @@
   <GymPage />
   <TrainingPage />
   <MyGym />
-  <div style="height: 100vh;"></div>
+  <CommentSlider />
 </div>
 </template>
 
@@ -14,10 +14,11 @@ import HeaderTitle from '../components/HeaderTitle'
 import GymPage from '../components/GymPage'
 import TrainingPage from '../components/TrainingPage'
 import MyGym from '../components/MyGym'
+import CommentSlider from '../components/CommentSlider'
 
 
 export default {
- components: { HeaderTitle, GymPage, TrainingPage, MyGym },
+ components: { HeaderTitle, GymPage, TrainingPage, MyGym, CommentSlider },
 }
 </script>
 
