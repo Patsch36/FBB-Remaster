@@ -66,7 +66,6 @@
 </template>
 
 <style>
-
 .header {
     height: 15% !important;
     width: 100% !important;
