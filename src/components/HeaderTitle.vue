@@ -1,5 +1,5 @@
 <template>
-  <header id="header" class="bg-background">
+  <header id="header" class="bg-background" style="transform: translateY(0);">
     <div class="header-training">
       <transition name="leftHeader" :key="animationTrigger" appear>
         <span class="header-text header-text-left">TR</span>

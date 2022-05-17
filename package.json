@@ -14,8 +14,10 @@
     "ionic": "^5.4.16",
     "jquery": "^3.6.0",
     "roboto-fontface": "*",
+    "swiper": "^8.1.4",
     "vue": "^3.2.13",
     "vue-router": "^4.0.14",
+    "vue3-carousel": "^0.1.40",
     "vuetify": "npm:@vuetify/nightly@next",
     "webfontloader": "^1.0.0"
   },
