@@ -6,6 +6,7 @@
   <TrainingPage />
   <MyGym />
   <CommentSlider />
+  <PriceSection />
 </div>
 </template>
 
@@ -15,10 +16,11 @@ import GymPage from '../components/GymPage'
 import TrainingPage from '../components/TrainingPage'
 import MyGym from '../components/MyGym'
 import CommentSlider from '../components/CommentSlider'
+import PriceSection from '../components/PriceSection'
 
 
 export default {
- components: { HeaderTitle, GymPage, TrainingPage, MyGym, CommentSlider },
+ components: { HeaderTitle, GymPage, TrainingPage, MyGym, CommentSlider, PriceSection },
 }
 </script>
 
