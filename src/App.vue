@@ -2,7 +2,7 @@
   <v-app class="grey lighten-4 bg-background" style="width:100vw">
     <NavBar />
 
-    <v-content >
+    <v-content>
       <router-view></router-view>
 
     </v-content>

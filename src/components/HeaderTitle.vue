@@ -46,7 +46,7 @@ export default {
 }
 
 .header-text {
-  font-size: 259.7px; /* 1.733 is Proportionality factor of header to image*/
+  font-size: 259.7px !important; /* 1.733 is Proportionality factor of header to image*/
   font-style: italic;
   font-weight: bold;
   color: #fffd51;
@@ -118,7 +118,7 @@ export default {
 /* Nesthub and Tablets */
 @media screen and (max-width: 1200px) {
   .header-text {
-    font-size: 173.1px; /* 1.733 is Proportionality factor of header to image*/
+    font-size: 173.1px !important; /* 1.733 is Proportionality factor of header to image*/
     transform: translateY(2.5%);
     overflow: visible;
     width: auto;
@@ -139,7 +139,7 @@ export default {
 /* Smaller Ipads */
 @media screen and (max-width: 900px) {
   .header-text {
-    font-size: 115.4px; /* 1.733 is Proportionality factor of header to image*/
+    font-size: 115.4px !important; /* 1.733 is Proportionality factor of header to image*/
     transform: translateY(2.5%);
     overflow: visible;
     width: auto;
@@ -159,7 +159,7 @@ export default {
 /* Smartphones */
 @media screen and (max-width: 480px) {
   .header-text {
-    font-size: 57.7px; /* 1.733 is Proportionality factor of header to image*/
+    font-size: 57.7px !important; /* 1.733 is Proportionality factor of header to image*/
     transform: translateY(2.5%);
     width: auto;
   }
@@ -177,7 +177,7 @@ export default {
 /* Smaller Smartphones (and the Galaxy Fold??) */
 @media screen and (max-width: 280px) {
   .header-text {
-    font-size: 40px; /* 1.733 is Proportionality factor of header to image*/
+    font-size: 40px !important; /* 1.733 is Proportionality factor of header to image*/
     transform: translateY(2.5%);
     width: auto;
   }

@@ -2,8 +2,8 @@
   <nav>
     <v-app-bar flat app class="bg-grey">
       <v-app-title class="text-uppercase">
-        <span class="font-weight-light red-text">Fitness</span>
-        <span class="text-primary">Barock</span>
+        <span class="font-weight-light red-text" style="font-size: 22px">Fitness</span>
+        <span class="text-primary" style="font-size: 22px">Barock</span>
       </v-app-title>
 
       <v-spacer></v-spacer>
@@ -71,13 +71,13 @@ export default {
       mode: process.env.NODE_ENV === "production",
       links: [
         { icon: "mdi-home", text: "Titelseite", route: "/" },
-        { icon: "mdi-folder", text: "My Projects", route: "/projects" },
-        { icon: "mdi-account", text: "Team", route: "/team" },
+        { icon: "mdi-cloud", text: "Wetter", route: "/weather" },
+        { icon: "mdi-cloud", text: "RSS Feed", route: "/rssfeed" }
       ],
       links_prod: [
         { icon: "mdi-home", text: "Titelseite", route: "/fbb/" },
-        { icon: "mdi-folder", text: "My Projects", route: "/projects" },
-        { icon: "mdi-account", text: "Team", route: "/team" },
+        { icon: "mdi-cloud", text: "Wetter", route: "/weather" },
+        { icon: "mdi-cloud", text: "RSS Feed", route: "/rssfeed" }
       ],
     };
   },
