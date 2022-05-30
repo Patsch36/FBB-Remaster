@@ -74,11 +74,11 @@ export default {
           news.img = xmlDoc
             .getElementsByTagName("content:encoded")[count]
             .getElementsByTagName("img")[0];
+          news.link = xmlDoc.getElementsByTagName("guid")[count].innerHTML;
           news.title =
             xmlDoc.getElementsByTagName("title")[count + 1].innerHTML;
           news.description =
             xmlDoc.getElementsByTagName("description")[count + 1].innerHTML;
-          news.link = xmlDoc.getElementsByTagName("guid")[count + 1].innerHTML;
 
           if (news.description.includes("<!--")) {
             news.description = news.description.substring(
