@@ -2,7 +2,7 @@
   <div>
     <v-container class="message">
       <v-row>
-        <v-col cols="12" class="text-h1 mb-4 mx-auto text-center">Tagesschau</v-col>
+        <v-col cols="12" class="text-h4 text-md-h1 mb-4 mx-auto text-center">Tagesschau</v-col>
       </v-row>
       <v-row>
         <v-col
@@ -21,7 +21,7 @@
   class="my-16"
 ></v-divider>
       <v-row>
-        <v-col cols="12" class="text-h1 mb-4 mx-auto text-center">Heise.de</v-col>
+        <v-col cols="12" class="text-h4 text-md-h1 mb-4 mx-auto text-center">Heise.de</v-col>
       </v-row>
       <v-row>
         <v-col

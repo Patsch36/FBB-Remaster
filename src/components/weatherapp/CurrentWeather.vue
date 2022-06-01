@@ -6,7 +6,7 @@
           <v-container style="height: 100%">
             <v-row class="d-flex flex-colum align-content-space-between" style="height: 100%">
               <v-col cols="12" class="d-flex flex-column">
-                <span class="text-text_dark text-h2 font-weight-medium">
+                <span class="text-text_dark text-h4 text-md-h2 font-weight-medium">
                   {{ this.currentWeather.name }}
                 </span>
                 <span class="text-text_dark text-h3 font-weight-thin">
@@ -72,10 +72,18 @@ export default {
 
 .wrapper {
   width: 100%;
+  margin-bottom: 100px;
 }
 
 
 .icon-img{
   height: 100%;
+}
+
+@media screen and (max-width: 600px){
+  .icon-img{
+    margin-top: 30px;
+    margin-inline: auto;
+  }
 }
 </style>

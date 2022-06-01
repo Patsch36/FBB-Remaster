@@ -1,20 +1,21 @@
 <template>
-  <div
-    class="w-100 background main"
-    :class="{ day: isDay, night: isNight }"
-    style="height: auto"
-  >
-    <ScaleLoader v-if="loading" class="loading" />
-    <div v-else class="weather">
-      <div class="weather-wrapper">
-        <CurrentWeather
-          :currentWeather="currentWeather"
-          :isDay="isDay"
-          :isNight="isNight"
-        />
-        <HourlyWeather :forecast="forecast" />
-        <WeeklyForecast :forecast="forecast" />
-        <AdditionalInformation :currentWeather="currentWeather" />
+  <div class="main">
+    <div
+      class="w-100 background"
+      :class="{ day: isDay, night: isNight }"
+    >
+      <ScaleLoader v-if="loading" class="loading" />
+      <div v-else class="weather">
+        <div class="weather-wrapper">
+          <CurrentWeather
+            :currentWeather="currentWeather"
+            :isDay="isDay"
+            :isNight="isNight"
+          />
+          <HourlyWeather :forecast="forecast" />
+          <WeeklyForecast :forecast="forecast" />
+          <AdditionalInformation :currentWeather="currentWeather" />
+        </div>
       </div>
     </div>
   </div>
@@ -88,7 +89,7 @@ export default {
         this.currentWeather = document.data().currentWeather;
         await axios
           .get(
-            `https://api.openweathermap.org/data/2.5/onecall?lat=${
+            `http://localhost:3000/?lat=${
               document.data().currentWeather.coord.lat
             }&lon=${
               document.data().currentWeather.coord.lon
@@ -125,12 +126,27 @@ export default {
 </script>
 
 <style scoped>
+.main {
+  height: 1500px;
+  position: relative;
+  width: 100vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 960px){
+  .main{
+    height: 1720px;
+  }
+}
+
 .background {
   position: absolute;
   top: 0;
   left: 0;
   padding-top: 75px;
   min-height: 100%;
+  height: auto
 }
 
 .loading {
@@ -147,12 +163,8 @@ export default {
 .weather {
   transition: 500ms ease;
   overflow-x: hidden;
-  overflow-y: scroll;
 }
 
-.weather-wrapper {
-  height: calc(100vh - 200px);
-}
 
 .day {
   transition: 500ms ease all;

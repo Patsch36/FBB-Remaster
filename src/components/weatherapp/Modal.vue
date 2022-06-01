@@ -85,7 +85,7 @@ export default {
       } else {
         try {
           const response = await axios.get(
-            `https://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=metric&APPID=${this.APIkey}`
+            `http://localhost:3000/?q=${this.city}&units=metric`
           );
           const data = await response.data;
 

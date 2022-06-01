@@ -58,6 +58,7 @@ export default {
 .header-text-left {
   text-align: right;
   width: auto;
+  transform: translateY(4%);
 }
 
 .header-text-right {
@@ -160,12 +161,12 @@ export default {
 @media screen and (max-width: 480px) {
   .header-text {
     font-size: 57.7px !important; /* 1.733 is Proportionality factor of header to image*/
-    transform: translateY(2.5%);
+    transform: translateY(7%);
     width: auto;
   }
 
   .header-text-right {
-    transform: translate(-12%, 3%);
+    transform: translate(-22%, 4%);
     width: auto;
   }
 

@@ -9,7 +9,7 @@ require("firebase/firestore");
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDnIaFcxa_VG-3kE65qgakoLZDgJCzac64",
+  apiKey: process.env.VUE_APP_APIKEY,
   authDomain: "weatherwidgetapp-20b37.firebaseapp.com",
   projectId: "weatherwidgetapp-20b37",
   storageBucket: "weatherwidgetapp-20b37.appspot.com",

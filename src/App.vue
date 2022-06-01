@@ -36,10 +36,12 @@ export default {
 
 html{
   height: 100%;
+  overflow: hidden;
 }
 
 body{
   overflow-y: visible;
+  overflow: hidden;
 }
 
 </style>

@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .background-img {
   z-index: -2;
   height: 100%;
@@ -58,7 +58,7 @@ export default {
 .card {
   width: 250px;
   height: 250px;
-
+  margin: 0 auto;
 }
 
 .card_title{

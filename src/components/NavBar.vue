@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <v-app-bar flat app class="bg-grey">
+    <v-app-bar flat app class="bg-grey toolbar">
       <v-app-title class="text-uppercase">
         <span class="font-weight-light red-text" style="font-size: 22px">Fitness</span>
         <span class="text-primary" style="font-size: 22px">Barock</span>
@@ -87,6 +87,9 @@ export default {
 </script>
 
 <style>
+nav, .toolbar{
+  max-width: 100vw;
+}
 #link {
   display: flex;
   flex-direction: row;

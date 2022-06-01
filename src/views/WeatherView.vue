@@ -51,7 +51,7 @@ export default {
   components: { ScaleLoader, NavBar, Modal, AddCity },
   data() {
     return {
-      APIkey: "a147b21d6c970cd71652d200885616de",
+      APIURL: "http://localhost:3000/",
       modalOpen: null,
       edit: null,
       addCityActive: null,
@@ -70,10 +70,6 @@ export default {
   created() {
     this.getCityWeather();
     this.checkRoute();
-
-    // setTimeout( () => {
-    //   console.log(this.cities[0].city);
-    // }, 2000)
   },
   methods: {
     async getCityWeather() {
@@ -92,9 +88,9 @@ export default {
       }
       querySnapshot.forEach(async (document) => {
         const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${
+          `${this.APIURL}?q=${
             document.data().city
-          }&units=metric&APPID=${this.APIkey}`
+          }&units=metric`
         );
 
         const data = response.data;
