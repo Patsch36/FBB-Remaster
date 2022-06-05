@@ -1,24 +1,37 @@
-# vuetify_3_test
+# Webengeneering Abschlussabgabe
 
-## Project setup
-```
+## Installation und Start
+Um die Website zu starten, müssen zwei Terminals im root Verzeichnis geöffnet werden.
+Danach werden folgende Commands ausgeführt:
+
+### Terminal 1
+
+Um erforlderliche Moudle zu installieren
+````
 npm install
-```
+````
 
-### Compiles and hot-reloads for development
-```
+Um den Vue.js Webserver zu startet:
+````
 npm run serve
-```
+````
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Terminal 2
+Um in das backend directory zu gelanden:
+````
+cd backend
+````
 
-### Lints and fixes files
-```
-npm run lint
-```
+Um erforlderliche Moudle zu installieren
+````
+npm install
+````
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Um das backend zu starten
+````
+nodemon index.js
+````
+
+
+## Flowchart
+<embed src="activity.pdf" type="application/pdf">
