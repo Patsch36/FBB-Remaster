@@ -40,6 +40,13 @@ Um das backend zu starten
 nodemon index.js
 ````
 
+Wenn der Befehl Nodemon nicht gefunden werden kann (Fehler tritt meistens auf Windows auf), sollte der Command
+```
+npm install -g nodemon
+```
+ausgeführt werden.
+
+
 
 ## Flowchart
 ![Page_1](activity.jpg)
