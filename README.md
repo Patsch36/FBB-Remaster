@@ -1,5 +1,7 @@
 # Webengeneering Abschlussabgabe
 
+Abgabe Webengeneering von Patrick Scheich (Matrikelnimmer 8060451)
+
 ## Installation und Start
 Um die Website zu starten, müssen zwei Terminals im root Verzeichnis geöffnet werden.
 Danach werden folgende Commands ausgeführt:
