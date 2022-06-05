@@ -1,4 +1,7 @@
 # Webengeneering Abschlussabgabe
+
+Abgabe Webengeneering von Patrick Scheich (Matrikelnummer 8060451)
+
 **Bitte dieses Dokument in einem Markdowneditor mit Preview öffnen, wie zum Beispiel Visual Studio Code.**
 
 Alternativ kann die ReadMe als Vorschau auch auf [GitHub](https://github.com/Patsch36/FBB-Remaster/blob/main/README.md) angesehen werden.
